@@ -1,16 +1,10 @@
 # Sistema de Gestión Académica
 
-Primera versión de un sistema universitario desarrollado en Python para la Actividad colaborativa N.° 1 de Programación I (Universidad de Manizales). El proyecto es **un único sistema** que evoluciona a través de cinco fases: modelado, encapsulamiento, herencia, sobreescritura y polimorfismo.
+Primera versión de un sistema universitario desarrollado en Python para la Actividad N.° 1 de Programación I (Universidad de Manizales). El proyecto es **un único sistema** que evoluciona a través de cinco fases: modelado, encapsulamiento, herencia, sobreescritura y polimorfismo.
 
 ## Integrantes
 
-- Cristian
-- *(Completar nombre del integrante 2)*
-- *(Completar nombre del integrante 3)*
-- *(Completar nombre del integrante 4)*
-- *(Completar nombre del integrante 5, si aplica)*
-
-> Cada integrante debe realizar al menos un commit con una contribución real al desarrollo.
+- Cristian Camilo Alzate Cardona - 1.192.726.014
 
 ## Descripción general
 
@@ -70,8 +64,8 @@ No se requieren librerías externas.
 
 Se utilizó Cursor (asistente de código) como apoyo para:
 
-- organizar la estructura del proyecto a partir del enunciado;
-- redactar el esqueleto de las clases y el programa de demostración;
+- organizar la estructura del proyecto.
+- verificar el esqueleto de las clases y el programa de demostración.
 - revisar que las validaciones y el recorrido polimórfico cumplieran los criterios de la actividad.
 
-Los integrantes del equipo comprenden, pueden explicar y justifican las decisiones de diseño (encapsulamiento, herencia, sobreescritura y polimorfismo) y el código entregado.
+Se comprende, se puede explicar y justificar las decisiones de diseño (encapsulamiento, herencia, sobreescritura y polimorfismo) y el código entregado.
