@@ -1,6 +1,6 @@
 # Sistema de Gestión Académica
 
-Primera versión de un sistema universitario desarrollado en Python para la Actividad N.° 1 de Programación I (Universidad de Manizales). El proyecto es **un único sistema** que evoluciona a través de cinco fases: modelado, encapsulamiento, herencia, sobreescritura y polimorfismo.
+Este proyecto es la versión de un sistema universitario desarrollado en Python para la Actividad N.° 1 de Programación I (Universidad de Manizales). El proyecto es **un único sistema** que evoluciona a través de cinco fases: modelado, encapsulamiento, herencia, sobreescritura y polimorfismo.
 
 ## Integrantes
 
@@ -33,6 +33,8 @@ gestion-academica/
     ├── programa_academico.py
     └── asignatura.py
 ```
+
+
 
 ## Cómo ejecutar
 
