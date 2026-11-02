@@ -66,8 +66,7 @@ No se requieren librerías externas.
 
 Se utilizó Cursor (asistente de código) como apoyo para:
 
-- organizar la estructura del proyecto a partir del enunciado;
-- redactar el esqueleto de las clases y el programa de demostración;
-- revisar que las validaciones y el recorrido polimórfico cumplieran los criterios de la actividad.
-
-Los integrantes del equipo comprenden, pueden explicar y justifican las decisiones de diseño (encapsulamiento, herencia, sobreescritura y polimorfismo) y el código entregado.
+organizar la estructura del proyecto.
+verificar el esqueleto de las clases y el programa de demostración.
+revisar que las validaciones y el recorrido polimórfico cumplieran los criterios de la actividad.
+Se comprende, se puede explicar y justificar las decisiones de diseño (encapsulamiento, herencia, sobreescritura y polimorfismo) y el código entregado.
