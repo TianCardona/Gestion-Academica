@@ -1,7 +1,9 @@
-"""Persona vinculada a la universidad (clase base)."""
+"""Persona vinculada a la universidad (clase base abstracta)."""
+
+from abc import ABC, abstractmethod
 
 
-class Persona:
+class Persona(ABC):
     """Información común de cualquier integrante de la comunidad académica."""
 
     def __init__(self, identificacion, nombre, correo):
@@ -40,5 +42,8 @@ class Persona:
             f"Nombre: {self._nombre} | Correo: {self._correo}"
         )
 
+    @abstractmethod
     def realizar_actividad_principal(self):
-        print(f"{self._nombre} forma parte de la comunidad universitaria.")
+        """Actividad principal que debe implementar cada tipo de persona."""
+        pass
+

@@ -6,6 +6,9 @@ from .persona import Persona
 from .estudiante import Estudiante
 from .docente import Docente
 from .administrativo import Administrativo
+from .horario import Horario
+from .grupo_academico import GrupoAcademico
+from . import excepciones
 
 __all__ = [
     "ProgramaAcademico",
@@ -14,4 +17,8 @@ __all__ = [
     "Estudiante",
     "Docente",
     "Administrativo",
+    "Horario",
+    "GrupoAcademico",
+    "excepciones",
 ]
+

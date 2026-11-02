@@ -1,8 +1,11 @@
 """
 Sistema de Gestión Académica - Programa principal.
 
-Demuestra en un único proyecto las cinco fases de la actividad:
+Demuestra en un único proyecto las cinco fases de la actividad 1:
 modelado, encapsulamiento, herencia, sobreescritura y polimorfismo.
+
+Evolución Actividad Colaborativa N°2:
+clases abstractas, composición y excepciones personalizadas.
 """
 
 from modelos import (
@@ -10,8 +13,11 @@ from modelos import (
     Asignatura,
     Docente,
     Estudiante,
+    GrupoAcademico,
+    Horario,
     ProgramaAcademico,
 )
+from modelos import excepciones
 
 
 def mostrar_separador(titulo):
@@ -172,6 +178,92 @@ def main():
         persona.mostrar_informacion()
         persona.realizar_actividad_principal()
         print("-" * 70)
+
+    # ==================== ACTIVIDAD COLABORATIVA N°2 ====================
+
+    mostrar_separador("8. Evolución: Clases abstractas, composición y excepciones personalizadas")
+
+    print("NOTA: La clase Persona ahora es ABSTRACTA (ABC).")
+    print("No se puede instanciar directamente. Estudiante, Docente y Administrativo")
+    print("deben implementar obligatoriamente realizar_actividad_principal().")
+    print("Se demuestra a continuación con polimorfismo sobre los objetos creados.\n")
+
+    # Composición: Crear Horario y asignarlo al GrupoAcadémico
+    horario_poo = Horario(dia="Lunes / Miércoles", hora_inicio="08:00", hora_fin="10:00", aula="A-301")
+
+    grupo_poo = GrupoAcademico(
+        codigo_grupo="POO-G1",
+        asignatura=poo,
+        docente=docente_1,
+        horario=horario_poo,  # COMPOSICIÓN: GrupoAcadémico TIENE un Horario
+        cupo_maximo=2,
+    )
+
+    grupo_poo.mostrar_informacion_grupo()
+
+    # Matrícula válida
+    try:
+        print("\n--- Intentando matricular estudiantes ---")
+        grupo_poo.matricular(estudiante_1)
+        grupo_poo.matricular(estudiante_2)
+        grupo_poo.consultar_estudiantes()
+    except excepciones.GestionAcademicaException as e:
+        print("ERROR:", e)
+
+    mostrar_separador("9. Pruebas con excepciones personalizadas (try/except)")
+
+    # Crear un tercer estudiante para probar el cupo máximo
+    estudiante_3 = Estudiante(
+        identificacion="1003",
+        nombre="Sofía Ramírez",
+        correo="sofia.ramirez@umanizales.edu.co",
+        codigo_estudiantil="E2024003",
+        programa=ingenieria_sistemas,
+        semestre=2,
+        promedio_acumulado=4.0,
+    )
+
+    print("Prueba 1: Intentar matricular un tercer estudiante con cupo máximo = 2")
+    try:
+        grupo_poo.matricular(estudiante_3)
+    except excepciones.CupoMaximoException as e:
+        print("EXCEPCIÓN CAPTURADA [CupoMaximoException]:", e)
+    except excepciones.GestionAcademicaException as e:
+        print("EXCEPCIÓN CAPTURADA:", e)
+
+    print("\nPrueba 2: Intentar matricular un estudiante ya matriculado")
+    try:
+        grupo_poo.matricular(estudiante_1)
+    except excepciones.EstudianteYaMatriculadoException as e:
+        print("EXCEPCIÓN CAPTURADA [EstudianteYaMatriculadoException]:", e)
+    except excepciones.GestionAcademicaException as e:
+        print("EXCEPCIÓN CAPTURADA:", e)
+
+    print("\nPrueba 3: Retirar estudiante y volver a matricular")
+    try:
+        grupo_poo.retirar(estudiante_1)
+        grupo_poo.consultar_estudiantes()
+        grupo_poo.matricular(estudiante_1)
+        grupo_poo.consultar_estudiantes()
+    except excepciones.GestionAcademicaException as e:
+        print("ERROR:", e)
+
+    print("\nPrueba 4: Intentar retirar un estudiante NO matriculado")
+    try:
+        grupo_poo.retirar(estudiante_3)
+    except excepciones.EstudianteNoMatriculadoException as e:
+        print("EXCEPCIÓN CAPTURADA [EstudianteNoMatriculadoException]:", e)
+    except excepciones.GestionAcademicaException as e:
+        print("EXCEPCIÓN CAPTURADA:", e)
+
+    mostrar_separador("10. Demostración final")
+    print("Se evidencia:")
+    print("- Clases abstractas: Persona es ABC con @abstractmethod")
+    print("- Herencia: Estudiante/Docente/Administrativo heredan de Persona")
+    print("- Composición: GrupoAcademico contiene un objeto Horario")
+    print("- Sobreescritura y polimorfismo: métodos redefinidos por tipo")
+    print("- Excepciones personalizadas: lanzadas, capturadas y tratadas con try/except")
+    print("\n¡Evolución del Sistema de Gestión Académica completada con éxito!")
 
 
 if __name__ == "__main__":
