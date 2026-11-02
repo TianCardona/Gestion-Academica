@@ -4,11 +4,7 @@ Primera versión de un sistema universitario desarrollado en Python para la Acti
 
 ## Integrantes
 
-- Cristian
-- *(Completar nombre del integrante 2)*
-- *(Completar nombre del integrante 3)*
-- *(Completar nombre del integrante 4)*
-- *(Completar nombre del integrante 5, si aplica)*
+- Cristian Camilo Alzate Cardona - 1.192.726.014
 
 > Cada integrante debe realizar al menos un commit con una contribución real al desarrollo.
 
