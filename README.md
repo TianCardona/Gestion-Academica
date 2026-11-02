@@ -6,7 +6,6 @@ Primera versión de un sistema universitario desarrollado en Python para la Acti
 
 - Cristian Camilo Alzate Cardona - 1.192.726.014
 
-> Cada integrante debe realizar al menos un commit con una contribución real al desarrollo.
 
 ## Descripción general
 
